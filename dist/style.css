@@ -53,14 +53,14 @@ table {
 /* general */
 li{
   line-height: 30px;
-  font-size: 15px;
+  font-size: 14px;
   padding:3px 3px 3px 12px;
   border-radius: 3px;
 }
 td{
   float:left;
   line-height: 30px;
-  font-size:15px;
+  font-size:14px;
 }
 .todo:hover{
   cursor:pointer;
@@ -74,7 +74,7 @@ a{
   font-size: 16px;
 }
 .fa-plus{
-  margin: 0px 14px;
+  margin: 20px 14px;
 }
 hr.thin-task {
   height: 1px;
@@ -103,18 +103,29 @@ hr.thin-project{
   right: 9px;
   margin: 10px;
   position: absolute;
+  color: rgba(255, 255, 255, 0.867);
+  cursor: pointer;
 }
 .fa-circle{
   float:left;
   margin: 10px;
   left: 5px;
+  font-size: 17px;
+  border-radius: 50%;
   position: absolute;
+  
+}
+.fa-circle:hover{
+  background-color: #363636;
+  cursor:pointer;
 }
 .fa-check-circle{
   float:left;
   margin: 10px;
+  font-size: 17px;
   left: 5px;
   position: absolute;
+  cursor: pointer;
 }
 
 .date{
@@ -126,9 +137,20 @@ hr.thin-project{
   padding: 0px 10px;
 }
 .flag{
-  font-size: 13px;
+  cursor: pointer;
+  font-size: 12px;
   line-height: 10px;
   float:right;
+  color: rgba(255, 255, 255, 0.867);
+}
+.flag-toggle{
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 10px;
+  float:right;
+  color: #de4c4a;
+}
+.red{
   color: #de4c4a;
 }
 .right{
@@ -182,7 +204,7 @@ html{
 }
 
 .header-left{
-  margin-left: 240px;
+  margin-left: 200px;
 }
 
 /* body */
@@ -196,9 +218,9 @@ html{
   text-align: center;
   position: fixed;
   float: left;
-  top: 0px;
+  top: 10px;
   margin:auto;
-  padding:120px 0px 0px 60px;
+  padding:140px 0px 0px 30px;
   background-color : #282828;
   height: 90%;
   width: 30%;
@@ -238,7 +260,8 @@ html{
 }
 .project-title{
   position:absolute;
-  top:75px;
+  top:85px;
+  font-size: 19px;
 }
 
 .project-list{
@@ -263,6 +286,82 @@ html{
   
 }
 
+.todo-input.text{
+  width:500px;
+}
+.form-container{
+
+}
+
+#todo-input {
+  line-height:16px;
+  font-size:15px;
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #333;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #171717;
+  outline: none;
+}
+
+#todo-input, select {
+  color:rgba(255, 255, 255, 0.867);
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #333;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #171717;
+  outline: none;
+}
+
+input[type=submit] {
+  float: left;
+  width: 100px;
+  background-color: #de4c4a;
+  color: rgba(255, 255, 255, 0.867);
+  padding: 10px 13px;
+  margin: 2px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type=button] {
+  float: left;
+  line-height:16px;
+  font-size:13px;
+  width: 75px;
+  background-color: #1f1f1f;
+  color: rgb(70, 68, 68);
+  padding: 10px 10px;
+  margin: 2px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+.date-picker{
+  color: rgba(255, 255, 255, 0.867);
+  line-height:16px;
+  width: 20%;
+  font-size:14px;
+  margin: 8px 0;
+  padding: 12px 3px;
+  background-color: #171717;
+  border: 1px solid #333;
+  outline: none;
+  cursor: pointer;
+}
+
+input{float:left;}
 
 
 

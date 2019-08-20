@@ -6,6 +6,9 @@
   <link rel="stylesheet" href="style.css">
   <script src="//kit.fontawesome.com/e24ca22cc7.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+  
+
 
 
   <title></title>
@@ -48,45 +51,62 @@
           <hr class="thin-task">
           <div class="todos">
             <table>
-              <tr>
+              <tr class="todo">
                 <td><i class="fas fa-trash-alt right"></td>
                 <td><i class="far fa-circle"></td>
-                <td class="todo">Go to gym Go to gym Go to gym Go to gym Go to gym Go to gym Go to gym Go to gym Go to gym </td>
+                <td>Welcome to toDoList! Let’s get you started with a few tips: </td>
               </tr>
               
               <tr>
                 <td class="flag"><i class="fas fa-flag"></i></td>
-                <td class="date">  Tomorrow  </td>
                 
               </tr>
               <tr><td><hr class="thin-task"></td></tr>
-              <tr>
-                <td><i class="fas fa-check-circle"></td>
-                <td class="todo toggle">Business meeting @2pm</td>
-                <td><i class="fas fa-trash-alt right"></td>
-              </tr>
-              <tr><td><hr class="thin-task"></td></tr>
-              <tr>
+              <tr class="todo">
                 <td><i class="far fa-circle"></td>
-                <td class="todo">Do grocery shopping</td>
+                <td class="">Here, you can add todos or remove them!</td>
                 <td><i class="fas fa-trash-alt right"></td>
               </tr>
-              <tr><td><td class="date">30 Aug</td></td></tr>
+              <td class="flag"><i class="fas fa-flag"></i></td>
               <tr><td><hr class="thin-task"></td></tr>
-              <tr>
-                <td><i class="fas fa-check-circle"></td>
-                <td class="todo toggle">Call mom</td>
-                <td><i class="fas fa-trash-alt right"></td>
-              </tr>
-              <tr><td><hr class="thin-task"></td></tr>
-              <tr>
+              <tr class="todo">
                 <td><i class="far fa-circle"></td>
-                <td class="todo">Finish the remaining pages of the book</td>
+                <td class="">Add date information for your todos!</td>
                 <td><i class="fas fa-trash-alt right"></td>
               </tr>
-              <tr><td><td class="date">07 Dec</td></td></tr>
+              <tr>
+                  <td class="flag"><i class="fas fa-flag"></i></td>
+                <td><td class="date">Tomorrow</td></td>
+              </tr>
+              <tr><td><hr class="thin-task"></td></tr>
+              <tr class="todo">
+                <td><i class="far fa-circle red"></td>
+                <td class="">Set your todos high priority!</td>
+                <td><i class="fas fa-trash-alt right"></td>
+              </tr>
+              <tr>
+                  <td class="flag-toggle"><i class="fas fa-flag"></i></td>
+              </tr>
+              <tr><td><hr class="thin-task"></td></tr>
+              <tr class="todo">
+                <td><i class="fas fa-check-circle red"></td>
+                <td class="toggle">Toggle your todos completed!</td>
+                <td><i class="fas fa-trash-alt right"></td>
+              </tr>
+              <tr>
+                <td class="flag-toggle"><i class="fas fa-flag"></i></td>
+                <td><td class="date">07 Dec</td></td>
+              </tr>
               <tr><td><hr class="thin-task"></td></tr>
             </table>
+            <div class="form-container">
+              <form action="">
+                <input type="text" id="todo-input" name="YourTodo" autocomplete="off" placeholder="e.g. Business Meeting Today @15">
+                <input type="text" class="date-picker" placeholder="Schedule"><br>
+                <input type="submit" value="Add Todo!">
+                <input type="button" name="cancel" value="Cancel" >
+              </form>
+            </div>
           <div class="add-task">
               <i class="fas fa-plus"></i> Add Task!
           </div>
