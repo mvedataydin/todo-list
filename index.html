@@ -5,13 +5,71 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/e24ca22cc7.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+
 
   <title></title>
   
 </head>
 <body>
   <div id = "content">
+    <div class="header">
+      <div class="header-left">
+        <h1><i class="fas fa-calendar-check"></i> toDoList</h1>
+      </div>
+      <div class="header-right">
+      </div>
+    </div>
+    <div class="mainbody"> 
+     <div class="body-left">
+       <div class="left-container">
+          <div class="project-header">
+            <a>Projects </a>
+            <i class="fas fa-plus right"></i>
+          </div>
+          <hr class="thin-project">
+          <div class="project-list">
+            <ul>
+              <li>Sample Project  <i class="far fa-laugh-beam"></i> </li>
+              <li>Project 2</li>
+              <li>Project 3</li>
+            </ul>
+          </div>
+          <div class="add-project">
+              <i class="fas fa-plus"></i> Add Project!
+          </div>
+        </div>
+      </div>
+      <div class="body-right">
+        <div class="right-container">
+          <div class="project-title">
+            <a>Sample Project  <i class="far fa-laugh-beam"></i></a>
+          </div>
+          <hr class="thin-task">
+          <div class="todos">
+            <ul>
+              <li><i class="far fa-circle"></i>Business meeting @2pm <i class="fas fa-trash-alt right"></i>
 
+              </li>
+              <hr class="thin-task">
+              <li class="toggle"><i class="fas fa-check-circle"></i>Go to gym <i class="fas fa-trash-alt right"></i></li>
+              <hr class="thin-task">
+              <li><i class="far fa-circle"></i>Do grocery shopping<i class="fas fa-trash-alt right"></i></li>
+              <hr class="thin-task">
+              <li><i class="far fa-circle"></i>Call mom<i class="fas fa-trash-alt right"></i></li>
+              <hr class="thin-task">
+              <li class="toggle"><i class="fas fa-check-circle"></i>Finish the remaining pages of the book<i class="fas fa-trash-alt right"></i></li>
+              <hr class="thin-task">
+            </ul>
+          </div>
+          <div class="add-task">
+              <i class="fas fa-plus"></i> Add Task!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="logo"><i class="fas fa-check-double"></i></div>
+    <div class="footer"></div>
   </div>
   <script type="text/javascript" src="main.js"></script>
 </body>
