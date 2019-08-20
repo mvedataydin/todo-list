@@ -54,8 +54,17 @@ table {
 li{
   line-height: 30px;
   font-size: 15px;
-  padding:3px 12px 3px 12px;
+  padding:3px 3px 3px 12px;
   border-radius: 3px;
+}
+td{
+  float:left;
+  line-height: 30px;
+  font-size:15px;
+}
+.todo:hover{
+  cursor:pointer;
+  background-color: #363636;
 }
 li:hover{
   cursor:pointer;
@@ -64,15 +73,15 @@ li:hover{
 a{
   font-size: 16px;
 }
-i{
-  margin-right: 8px;
+.fa-plus{
+  margin: 0px 14px;
 }
 hr.thin-task {
   height: 1px;
   border: 0;
   color: #333;
   background-color: rgba(255, 255, 255, 0.15);
-  width: 550px
+  width: 550px;
   } 
 hr.thin-project{
   height: 1px;
@@ -87,10 +96,43 @@ hr.thin-project{
 }
 .fa-plus{
   color: #de4c4a;
+  cursor: pointer;
+}
+.fa-trash-alt{
+  float:right;
+  right: 9px;
+  margin: 10px;
+  position: absolute;
+}
+.fa-circle{
+  float:left;
+  margin: 10px;
+  left: 5px;
+  position: absolute;
+}
+.fa-check-circle{
+  float:left;
+  margin: 10px;
+  left: 5px;
+  position: absolute;
+}
+
+.date{
+  text-align: center;
+  font-size: 11px;
+  line-height: 10px;
+  color: #79b92e;
+  float:right;
+  padding: 0px 10px;
+}
+.flag{
+  font-size: 13px;
+  line-height: 10px;
+  float:right;
+  color: #de4c4a;
 }
 .right{
   float:right;
-  margin-right: 20px;
 }
 .left{
   float:left;
@@ -103,6 +145,7 @@ hr.thin-project{
   right: 50px;
   z-index: 300;
 }
+
 /* full screen */
 html{
   background-color: #1f1f1f;
@@ -205,11 +248,21 @@ html{
 }
 .add-project{
   padding-left: 15px;
+  cursor:pointer;
+  width: 150px;
+  height:25px;
+  line-height:30px;
 }
 
 .add-task{
   margin-bottom: 100px;
+  cursor:pointer;
+  width: 120px;
+  height:25px;
+  line-height:30px;
+  
 }
+
 
 
 
