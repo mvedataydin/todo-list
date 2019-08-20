@@ -1,0 +1,216 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; 
+}
+/* general */
+li{
+  line-height: 30px;
+  font-size: 15px;
+  padding:3px 12px 3px 12px;
+  border-radius: 3px;
+}
+li:hover{
+  cursor:pointer;
+  background-color: #363636;
+}
+a{
+  font-size: 16px;
+}
+i{
+  margin-right: 8px;
+}
+hr.thin-task {
+  height: 1px;
+  border: 0;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.15);
+  width: 550px
+  } 
+hr.thin-project{
+  height: 1px;
+  border: 0;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.15);
+  width: 220px;
+}
+.toggle{
+  text-decoration: line-through;
+  color: #79b92e;
+}
+.fa-plus{
+  color: #de4c4a;
+}
+.right{
+  float:right;
+  margin-right: 20px;
+}
+.left{
+  float:left;
+}
+.logo{
+  position:fixed;
+  font-size: 80px;
+  color: #de4c4a;
+  top: 90px;
+  right: 50px;
+  z-index: 300;
+}
+/* full screen */
+html{
+  background-color: #1f1f1f;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll
+
+}
+#content{
+  background-color : #282828;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+  overflow-y: scroll;
+  
+}
+/* header */
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 34px;
+  font-size: 20px;
+  padding: 10px 0px;
+  background-color : #282828;
+  box-shadow: 0px 0.5px 3px 0px #1f1f1f;
+  color: rgba(255, 255, 255, 0.867);
+  float: left;
+  height: 50px;
+  z-index: 100;
+}
+
+.header-left{
+  margin-left: 240px;
+}
+
+/* body */
+.mainbody{
+  color: rgba(255, 255, 255, 0.867);
+  padding: 10px;
+  margin: 10px;
+}
+
+.body-left{
+  text-align: center;
+  position: fixed;
+  float: left;
+  top: 0px;
+  margin:auto;
+  padding:120px 0px 0px 60px;
+  background-color : #282828;
+  height: 90%;
+  width: 30%;
+  z-index: 50;
+  
+}
+.body-right{
+  position: absolute;
+  background-color: #1f1f1f;
+  top: 0px;
+  left: 35%;
+  min-height: 100%;
+  width: 50%;
+  overflow: visible;
+  padding:120px 50px 50px 50px;
+
+  z-index: 20;
+}
+
+.left-container{
+  position: absolute;
+  margin-left: 130px;
+  top:80px;
+  text-align:left;
+}
+
+
+.right-container{
+  float: left;
+  margin: 0;
+  
+}
+
+.project-header{
+  padding-left: 15px;
+
+}
+.project-title{
+  position:absolute;
+  top:75px;
+}
+
+.project-list{
+  width: 230px;
+  padding:10px;
+  margin: 10px;
+}
+.add-project{
+  padding-left: 15px;
+}
+
+.add-task{
+  margin-bottom: 100px;
+}
+
+
+
+
