@@ -66,15 +66,19 @@ td{
   cursor:pointer;
   background-color: #363636;
 }
+.todo:hover + .info{
+  background-color: #363636;
+}
 li:hover{
   cursor:pointer;
   background-color: #363636;
 }
 a{
   font-size: 16px;
+  margin-left:14px;
 }
 .fa-plus{
-  margin: 20px 14px;
+  margin: 0px 14px;
 }
 hr.thin-task {
   height: 1px;
@@ -82,6 +86,7 @@ hr.thin-task {
   color: #333;
   background-color: rgba(255, 255, 255, 0.15);
   width: 550px;
+  font-size: 10px;
   } 
 hr.thin-project{
   height: 1px;
@@ -132,14 +137,17 @@ hr.thin-project{
   text-align: center;
   font-size: 11px;
   line-height: 10px;
+  margin-top: 5px;
   color: #79b92e;
   float:right;
   padding: 0px 10px;
 }
 .flag{
+  margin-right: 20px;
   cursor: pointer;
   font-size: 12px;
-  line-height: 10px;
+  line-height: 14px;
+  text-align:center;
   float:right;
   color: rgba(255, 255, 255, 0.867);
 }
@@ -288,9 +296,6 @@ html{
 
 .todo-input.text{
   width:500px;
-}
-.form-container{
-
 }
 
 #todo-input {

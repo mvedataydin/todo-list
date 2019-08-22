@@ -90,6 +90,7 @@ let createDom = () => {
   let projectHeaderRightDiv = document.createElement('div');
   projectHeaderRightDiv.classList.add('project-title');
   let projectHeaderRight = document.createElement('h1');
+  projectHeaderRight.classList.add('project-h1')
 
   projectHeaderRightDiv.appendChild(projectHeaderRight);
   rightContainer.appendChild(projectHeaderRightDiv);
