@@ -45,10 +45,15 @@ const renderRemoveProject = (obj, storage) => {
   deletePrjButton.addEventListener('click', function(){
     let tr = document.querySelectorAll('tr');
     let td = document.querySelectorAll('td');
+    if(document.querySelector('.todo-form')){
+      let formContainer = document.querySelector('.todo-form');
+      formContainer.parentNode.removeChild(formContainer);
+    }
     let addTask = document.querySelector('.add-task');
     let projectTitle = document.querySelector('.project-a');
 
     storage.splice(index, 1);
+
     addTask.parentNode.removeChild(addTask);
     deletePrjButton.parentNode.removeChild(deletePrjButton);
     projectTitle.textContent = '';
@@ -58,7 +63,7 @@ const renderRemoveProject = (obj, storage) => {
     tr.forEach(function(elm){
       elm.parentNode.removeChild(elm);
     })
-    
+    window.localStorage.setItem('data', JSON.stringify(storage));
     renderProject();
     if(document.querySelector('li')){
       renderTodos(storage[0]);
