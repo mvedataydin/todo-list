@@ -31,6 +31,7 @@ const initial = () => {
       }
       //DISPLAY FIRST PROJECT AND ITS TODOS UPON RELOAD
       renderProject();
+      if(storage[0] == undefined){return;}
       renderTodos(storage[0]);
       renderTButton(storage[0]);
     }
