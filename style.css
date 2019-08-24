@@ -154,7 +154,8 @@ hr.thin-project{
 .flag-toggle{
   cursor: pointer;
   font-size: 12px;
-  line-height: 10px;
+  line-height: 14px;
+  text-align: center;
   float:right;
   color: #de4c4a;
 }
@@ -173,7 +174,7 @@ hr.thin-project{
   color: #de4c4a;
   top: 90px;
   right: 50px;
-  z-index: 300;
+  z-index: 50;
 }
 
 /* full screen */
@@ -208,7 +209,7 @@ html{
   color: rgba(255, 255, 255, 0.867);
   float: left;
   height: 50px;
-  z-index: 100;
+  z-index: 40;
 }
 
 .header-left{
@@ -232,7 +233,7 @@ html{
   background-color : #282828;
   height: 90%;
   width: 30%;
-  z-index: 50;
+  z-index: 30;
   
 }
 .body-right{
@@ -270,6 +271,10 @@ html{
   position:absolute;
   top:85px;
   font-size: 19px;
+  width: 550px;
+}
+.project-h1{
+  width: 500px;
 }
 
 .project-list{
@@ -368,6 +373,67 @@ input[type=button] {
 
 input{float:left;}
 
+.project-form{
+  height: 100px;
+  width: 300px;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+  background-color : #282828;
+  color : green;
+  
+}
+#project-input{
+  color:rgba(255, 255, 255, 0.867);
+  line-height:16px;
+  font-size:15px;
+  width: 280px;
+  padding: 12px 20px;
+  margin: 10px;
+  position : absolute;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #171717;
+  outline: none;
 
+}
+#project-submit{
+  position: absolute;
+  margin: auto;
+  float: right;
+  bottom: 5px;
+  right: 65px;
+  width: 60px;
+}
+#cancel-button{
+  width: 60px;
+  position: absolute;
+  margin: auto;
+  background-color : #282828;;
+  float: right;
+  bottom: 5px;
+  right: 0;
+  padding: 0px;
+  margin-bottom: 10px;
+  
+}
 
+.fullscreen-container {
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(141, 141, 141, 0.5);
+  z-index: 100;
+}
+
+.fa-minus-circle{
+  margin-right:10px;
+  cursor: pointer;
+}
 
