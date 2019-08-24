@@ -1,6 +1,4 @@
-
-
-const projects = (name) => {
+const projectFactory = (name) => {
   return{
     name,
     todos: [],
@@ -10,12 +8,6 @@ const projects = (name) => {
   }
 }
 
-
-
-
-
-
-
-export {projects}
+export {projectFactory}
 
 

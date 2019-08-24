@@ -1,49 +1,53 @@
 import { todoFactory } from './todoo.js'
-import { projects } from './projects.js'
-import{ renderProjects, renderAddTodo } from './render.js'
+import { projectFactory } from './projects.js'
+import{ renderProject, renderAddTodo, renderTodos,renderTButton, renderAddProject, render } from './render.js'
+import {storage} from './storage.js'
 
 const addTodo = (project) => {
-  var x = document.getElementById("myLI").parentNode.nodeName;
-  let todoVal = document.querySelector('#todo-input');
-  let dateVal = document.querySelector('.date-picker');
-  console.log(todoVal.value);
-  console.log(dateVal.value);
-  let todo = todoFactory(todoVal.value, dateVal.value);
-  project.addTodo(todo)
-  renderProjects(project)
-  
-}
-
-const showForm = () => {
-  let addButton = document.querySelector('.add-task');
-  addButton.addEventListener('click', function(){
-    if(!document.querySelector('.todo-form')){
-      renderAddTodo()
-  }
-  else if(!document.querySelector('.todo-form').value){
+  if(document.querySelector('#todo-input').value == '') {
     let todoInput = document.getElementById('todo-input');
     let sampleTodos = ['e.g. Pay bills ', 'e.g. Schelude appointment with the dentist ',
-     'e.g. Attend daily meetings with team ', 'e.g. Submit my expenses ',
-    'e.g. Call mom today! ', 'e.g. Solve 10 coding problems', 'e.g. Pay bills ',
-     'e.g. Do weekly grocery shopping  ', 'e.g. Go to gym @8pm LegDay ', 'e.g. Reach out to prev. clients',
-     'e.g. Make dinner reservation for 12th August', "e.g. Plan David's birthday event",
-     'e.g. Wash dishes','e.g. Pick up party supplies', 'e.g. Book tickets to London'
+      'e.g. Attend daily meetings with team ', 'e.g. Submit my expenses ',
+      'e.g. Call mom today! ', 'e.g. Solve 10 coding problems', 'e.g. Pay bills ',
+      'e.g. Do weekly grocery shopping  ', 'e.g. Go to gym @8pm LegDay ', 'e.g. Reach out to prev. clients',
+      'e.g. Make dinner reservation for 12th August', "e.g. Plan David's birthday event",
+      'e.g. Wash dishes','e.g. Pick up party supplies', 'e.g. Book tickets to London'
     ];
-    var pHolder = sampleTodos[Math.floor(Math.random()*sampleTodos.length)];
+    let pHolder = sampleTodos[Math.floor(Math.random()*sampleTodos.length)];
     todoInput.placeholder = pHolder;
+    return;
   }
-  else{
-    addTodo(project);
-  }
-  });
+  let todoVal = document.querySelector('#todo-input');
+  let dateVal = document.querySelector('.date-picker');
+  let todo = todoFactory(todoVal.value, dateVal.value);
+  project.addTodo(todo);
+  renderTodos(project);
+}
+
+
+const addProject = () => {
+  let projectVal = document.querySelector('#project-input');
+  let project = projectFactory(projectVal.value);
+  storage.push(project);
+  renderProject();
+  let formProject = document.querySelector('.project-form');
+  let fullScreenDiv = document.querySelector('.fullscreen-container');
+  formProject.parentNode.removeChild(formProject);
+  fullScreenDiv.parentNode.removeChild(fullScreenDiv);
 
 }
 
-// var obj = {todo :{}, todo:{todos2 :'asd'}}
-// const size = item => (item.constructor === Object ? Object.keys(item).length : item.length)
-// console.log(size(obj))
+const projectFormListener = () => {
+  let addProjectButton = document.querySelectorAll('.project-add');
+  addProjectButton.forEach(function(button){
+    button.addEventListener('click', function(){
+      renderAddProject();
+    })
+  })
+}
 
-export {addTodo, showForm}
+
+export {addTodo,addProject, projectFormListener}
 
 
 

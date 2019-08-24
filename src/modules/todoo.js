@@ -1,5 +1,3 @@
-'use strict';
-
 const todoFactory = (todo, dueDate = '') => {
   return {
     todo,
@@ -13,7 +11,6 @@ const todoFactory = (todo, dueDate = '') => {
       this.priority = (this.priority == 'normal') ? 'high' : 'normal';
     }
   }
-
 }
 
 

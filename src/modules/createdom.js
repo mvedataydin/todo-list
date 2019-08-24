@@ -46,7 +46,7 @@ let createDom = () => {
   projectHeader.textContent = 'Projects '
 
   let plusIcon = document.createElement('i');
-  plusIcon.classList.add('fas', 'fa-plus', 'right');
+  plusIcon.classList.add('fas', 'fa-plus', 'right', 'project-add');
 
   projectHeaderDiv.appendChild(projectHeader);
   projectHeaderDiv.appendChild(plusIcon);
@@ -68,9 +68,9 @@ let createDom = () => {
   leftContainer.appendChild(projectList);
 
   let addProject = document.createElement('div');
-  addProject.classList.add('add-project');
+  addProject.classList.add('add-project', 'project-add');
   let plusIcon2 = document.createElement('i');
-  plusIcon2.classList.add('fas', 'fa-plus');
+  plusIcon2.classList.add('fas', 'fa-plus','project-add');
   addProject.appendChild(plusIcon2);
   addProject.insertAdjacentHTML( 'beforeend', '  Add Project!' );
 
@@ -89,8 +89,8 @@ let createDom = () => {
 
   let projectHeaderRightDiv = document.createElement('div');
   projectHeaderRightDiv.classList.add('project-title');
-  let projectHeaderRight = document.createElement('h1');
-  projectHeaderRight.classList.add('project-h1')
+  let projectHeaderRight = document.createElement('a');
+  projectHeaderRight.classList.add('project-a')
 
   projectHeaderRightDiv.appendChild(projectHeaderRight);
   rightContainer.appendChild(projectHeaderRightDiv);
@@ -105,15 +105,15 @@ let createDom = () => {
   let table = document.createElement('table');
   todosDiv.appendChild(table);
 
-  let addTask = document.createElement('div');
-  addTask.classList.add('add-task');
+  // let addTask = document.createElement('div');
+  // addTask.classList.add('add-task');
 
-  let plusIcon3 = document.createElement('i');
-  plusIcon3.classList.add('fas', 'fa-plus');
-  addTask.appendChild(plusIcon3);
-  addTask.insertAdjacentHTML( 'beforeend', '  Add Task!' );
+  // let plusIcon3 = document.createElement('i');
+  // plusIcon3.classList.add('fas', 'fa-plus');
+  // addTask.appendChild(plusIcon3);
+  // addTask.insertAdjacentHTML( 'beforeend', '  Add Task!' );
 
-  todosDiv.appendChild(addTask);
+  //todosDiv.appendChild(addTask);
   rightContainer.appendChild(todosDiv);
   rightBody.appendChild(rightContainer);
   mainBody.appendChild(rightBody);
