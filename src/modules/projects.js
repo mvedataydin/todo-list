@@ -1,13 +1,11 @@
-const projectFactory = (name) => {
-  return{
+const projectFactory = name => {
+  return {
     name,
     todos: [],
-    addTodo (todo) {
-      this.todos.push(todo)
-    }
-  }
-}
+    addTodo(todo) {
+      this.todos.push(todo);
+    },
+  };
+};
 
-export {projectFactory}
-
-
+export { projectFactory };

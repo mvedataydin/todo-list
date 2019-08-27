@@ -1,2 +1,1 @@
-export const storage =[];
-
+export const storage = [];

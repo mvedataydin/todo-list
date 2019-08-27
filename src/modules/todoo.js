@@ -4,15 +4,13 @@ const todoFactory = (todo, dueDate = '') => {
     dueDate,
     priority: 'normal',
     completed: false,
-    toggleCompleted () {
-      this.completed = (this.completed == false) ? true : false;
+    toggleCompleted() {
+      this.completed = this.completed == false ? true : false;
     },
-    togglePriority () {
-      this.priority = (this.priority == 'normal') ? 'high' : 'normal';
-    }
-  }
-}
+    togglePriority() {
+      this.priority = this.priority == 'normal' ? 'high' : 'normal';
+    },
+  };
+};
 
-
-
-export{todoFactory};
+export { todoFactory };

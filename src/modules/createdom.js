@@ -1,15 +1,15 @@
-"use strict";
+'use strict';
 
 let createDom = () => {
   //get main div
   const container = document.getElementById('content');
   const docFrag = document.createDocumentFragment();
-  
+
   // HEADER
   // create header
   let headerDiv = document.createElement('div');
   headerDiv.classList.add('header');
-  
+
   let headerLeftDiv = document.createElement('div');
   headerLeftDiv.classList.add('header-left');
   //left header
@@ -17,8 +17,7 @@ let createDom = () => {
   let headerLogo = document.createElement('i');
   headerLogo.classList.add('fas', 'fa-calendar-check');
   headerLeft.appendChild(headerLogo);
-  headerLeft.insertAdjacentHTML( 'beforeend', '  toDoList' )
-
+  headerLeft.insertAdjacentHTML('beforeend', '  toDoList');
 
   //right header
 
@@ -36,14 +35,14 @@ let createDom = () => {
   // left body
   let leftBody = document.createElement('div');
   leftBody.classList.add('body-left');
-  let leftContainer = document.createElement('div')
+  let leftContainer = document.createElement('div');
   leftContainer.classList.add('left-container');
 
   let projectHeaderDiv = document.createElement('div');
   projectHeaderDiv.classList.add('project-header');
 
   let projectHeader = document.createElement('a');
-  projectHeader.textContent = 'Projects '
+  projectHeader.textContent = 'Projects ';
 
   let plusIcon = document.createElement('i');
   plusIcon.classList.add('fas', 'fa-plus', 'right', 'project-add');
@@ -57,12 +56,11 @@ let createDom = () => {
   hr.classList.add('thin-project');
   leftContainer.appendChild(hr);
 
-
   //PROJECTS LIST
   let projectList = document.createElement('div');
   projectList.classList.add('project-list');
   let ul = document.createElement('ul');
-  ul.classList.add('projects')
+  ul.classList.add('projects');
   projectList.appendChild(ul);
 
   leftContainer.appendChild(projectList);
@@ -70,9 +68,9 @@ let createDom = () => {
   let addProject = document.createElement('div');
   addProject.classList.add('add-project', 'project-add');
   let plusIcon2 = document.createElement('i');
-  plusIcon2.classList.add('fas', 'fa-plus','project-add');
+  plusIcon2.classList.add('fas', 'fa-plus', 'project-add');
   addProject.appendChild(plusIcon2);
-  addProject.insertAdjacentHTML( 'beforeend', '  Add Project!' );
+  addProject.insertAdjacentHTML('beforeend', '  Add Project!');
 
   leftContainer.appendChild(addProject);
   leftBody.appendChild(leftContainer);
@@ -90,7 +88,7 @@ let createDom = () => {
   let projectHeaderRightDiv = document.createElement('div');
   projectHeaderRightDiv.classList.add('project-title');
   let projectHeaderRight = document.createElement('a');
-  projectHeaderRight.classList.add('project-a')
+  projectHeaderRight.classList.add('project-a');
 
   projectHeaderRightDiv.appendChild(projectHeaderRight);
   rightContainer.appendChild(projectHeaderRightDiv);
@@ -129,11 +127,6 @@ let createDom = () => {
 
   docFrag.appendChild(logoContainer);
   container.appendChild(docFrag);
+};
 
-
-
-
-}
-
-
-export {createDom}
+export { createDom };
