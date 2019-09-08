@@ -210,7 +210,7 @@ const renderAddTodo = project => {
   datePicker.placeholder = 'Schedule';
   let submitButton = document.createElement('input');
   submitButton.type = 'submit';
-  submitButton.value = 'Add Todo!';
+  submitButton.value = 'Add Todo';
   let cancelButton = document.createElement('input');
   cancelButton.type = 'button';
   cancelButton.value = 'Cancel';
@@ -239,7 +239,7 @@ const renderTButton = project => {
   let plusIcon = document.createElement('i');
   plusIcon.classList.add('fas', 'fa-plus');
   addTask.appendChild(plusIcon);
-  addTask.insertAdjacentHTML('beforeend', '  Add Task!');
+  addTask.insertAdjacentHTML('beforeend', '  Add Task');
   addTask.addEventListener('click', function() {
     if (document.querySelector('.todo-form')) {
       let todoInput = document.getElementById('todo-input');
@@ -289,14 +289,14 @@ const renderAddProject = () => {
   let submitButton = document.createElement('input');
   submitButton.id = 'project-submit';
   submitButton.type = 'submit';
-  submitButton.value = 'Add!';
+  submitButton.value = 'Add';
   let br = document.createElement('br');
   let projectInput = document.createElement('input');
   projectInput.type = 'text';
   projectInput.id = 'project-input';
   projectInput.name = 'YourProject';
   projectInput.autocomplete = 'off';
-  projectInput.placeholder = 'Add new project!';
+  projectInput.placeholder = 'Add new project';
   let cancelButton = document.createElement('input');
   cancelButton.id = 'cancel-button';
   cancelButton.type = 'button';

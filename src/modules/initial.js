@@ -10,7 +10,7 @@ const initial = () => {
   if (storageLocal == null) {
     storageLocal = [
       {
-        name: 'Sample Project :)',
+        name: 'Sample Project',
         todos: [
           {
             todo:
