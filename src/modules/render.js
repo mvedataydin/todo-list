@@ -86,17 +86,20 @@ const renderTodos = project => {
     let tr = document.createElement('tr');
     tr.classList.add('todo');
 
-    let index = project.todos.indexOf(obj);
-
     let tdDelete = document.createElement('td');
     let iDelete = document.createElement('i');
     iDelete.classList.add('fas', 'fa-trash-alt', 'right');
     iDelete.addEventListener('click', function() {
+      let index = project.todos.indexOf(obj);
       tr.parentNode.removeChild(tr);
       info.parentNode.removeChild(info);
       trSeperator.parentNode.removeChild(trSeperator);
       project.todos.splice(index, 1);
-      window.localStorage.setItem('data', JSON.stringify(storage));
+      console.log(project.todos);
+      return window.localStorage.setItem(
+        'data',
+        JSON.stringify(storage),
+      );
     });
     tdDelete.appendChild(iDelete);
 
